@@ -1,0 +1,41 @@
+//is it a triangle?
+#include <iostream>
+using namespace std;
+int main()
+{
+    int angle1,angle2,angle3,sum;
+    int aside, bside, cside; 
+    cout<<"Enter  three angles of triangle:"; 
+    cin>>angle1>>angle2>>angle3;
+    
+    sum=angle1+angle2+angle3; 
+    if (sum==180)
+	{ 
+        cout<< "It is a triangle";
+        
+       cout<<"enter  length of side a "<<endl;
+       cin>>aside;
+       cout<<"enter  length of side b "<<endl;
+       cin>>bside;     
+       cout<<"enter  length of side c "<<endl;
+       cin>>cside;
+
+       if(aside==bside && bside==cside)
+	   { 
+            cout << "Equilateral triangle"<<endl;
+       }
+	   else if(aside==bside || aside==cside || bside==cside) 
+	   {
+            cout << "Isosceles triangle"<<endl;
+			}
+			else
+			{ 
+            cout << "Scalene triangle"<<endl;
+       }
+    }
+	else
+	{
+        cout << "This is not a triangle";
+    }
+    return 0;
+}

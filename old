@@ -1,0 +1,37 @@
+
+
+CHAPTER 1
+
+//not old enough
+#include <iostream>
+using namespace std;
+int main()
+{
+  int years=10;
+  cout << " You're "; 
+  cout << years; 
+  cout << " years old." << endl;
+  cout << " You are not old enough to play the game." << endl;
+  return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+			
+			

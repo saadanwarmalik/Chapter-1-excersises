@@ -1,0 +1,18 @@
+//continue?
+#include <iostream>
+using namespace std;
+int main()
+{
+    char input;
+    int count = 0; 
+    do{
+        cout << "Would you like to continue? (Y/N)" << endl; 
+        count++; 
+        cin >> input; 
+        input = toupper(input); 
+    }while(input == 'Y'); 
+    
+    cout << "Program exiting, loop ran " << count << " times" << endl;
+    
+    return 0;
+}

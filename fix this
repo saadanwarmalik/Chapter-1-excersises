@@ -1,0 +1,24 @@
+//Fix this
+#include <iostream>
+using namespace std;
+int main() {
+    
+    int counter = 0; //counting variable
+    char endNow = 'N'; //variable to check if user wants to quit
+    
+    while (counter < 5 && endNow != 'Y'){ //continue to loop while counter is less than 5 
+        Counter++; //increment counter
+        cout << "counter = " << counter  << "\n"; //output current counter value
+        cout << "Do you want to end the loop now, enter Y or N?" << endl; //ask if user wants to end loop
+        cin >> endNow; //get answer and store in endNow char
+        endNow = toupper(endNow); //convert endNow to uppercase to handle different potential entry formats
+        while(cin.fail() || (endNow != 'N' && endNow != 'Y')){ //while loop checks for invalid input 
+            cout << "Invalid input, enter Y or N" << endl;  //inform user input is invalid
+            cin.clear(); //clear potential error flag on input stream (e.g. if user entered number)
+            cin.ignore(250, '\n'); //ignore any previous input that might be
+            cin >> endNow; //get input again
+            endNow = toupper(endNow); //convert new input to uppercase again 
+        }
+    }
+    return 0;
+}
